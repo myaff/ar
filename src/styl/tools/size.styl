@@ -1,0 +1,146 @@
+// Примесь позволяет определять `width` и `height` одновременно.
+// К свойствам можно добавить префиксы `min-` и `max-`
+//
+// @author Hugo Giraudel, extended by Olga Grabko
+// @access public
+// @group Utilities
+//
+// @param {Length} $width - `width` элемента
+// @param {Length} $height [$width] - `height` элемента
+// @param {Mixed} $prop-prefix [false] - Префикс `min` или `max`
+//
+// @example styl - Использование
+// .foo 
+//   size(10em);
+// 
+//
+// .bar 
+//   size(100%, 10em);
+// 
+// 
+// .element 
+//   size(100%, 10em, min);
+// 
+//
+// .other-element 
+//   size(100%,, max);
+// 
+//
+// .other-element-2 
+//   size(100%, 10em, sometext);
+// 
+//
+// @example css - Вывод CSS
+// .foo {
+//   width: 10em;
+//   height: 10em;
+// }
+//
+// .bar {
+//   width: 100%;
+//   height: 10em;
+// }
+// 
+// .element {
+//   min-width: 10em;
+//   min-height: 10em;
+// }
+//
+// .other-element {
+//   max-width: 100%;
+//   max-height: 100%;
+// }
+//
+// .other-element-2 {
+//   width: 100%;
+//   height: 10em;
+// }
+//
+size($width, $height = $width, $prop-prefix = false)
+  $prefixes = min max;
+  if $prop-prefix in $prefixes
+    {$prop-prefix}-width: $width;
+    {$prop-prefix}-height: $height;
+  else
+    width: $width;
+    height: $height;
+
+
+// Примесь позволяет определять `min-width` и `min-height` одновременно.
+//
+// @author Olga Grabko
+// @access public
+// @group Utilities
+//
+// @param {Length} $width - `min-width` элемента
+// @param {Length} $height [$width] - `min-height` элемента
+//
+// @example styl - Использование
+// .foo 
+//   min-size(10em);
+// 
+//
+// .bar 
+//   min-size(100%, 10em);
+// 
+//
+// @example css - Вывод CSS
+// .foo {
+//   min-width: 10em;
+//   min-height: 10em;
+// }
+//
+// .bar {
+//   min-width: 100%;
+//   min-height: 10em;
+// }
+min-size($width, $height = $width) 
+  size($width, $height, min);
+
+
+// Примесь позволяет определять `max-width` и `max-height` одновременно.
+//
+// @author Olga Grabko
+// @access public
+// @group Utilities
+//
+// @param {Length} $width - `max-width` элемента
+// @param {Length} $height [$width] - `max-height` элемента
+//
+// @example styl - Использование
+// .foo 
+//   max-size(10em);
+// 
+//
+// .bar 
+//   max-size(100%, 10em);
+// 
+//
+// @example css - Вывод CSS
+// .foo {
+//   max-width: 10em;
+//   max-height: 10em;
+// }
+//
+// .bar {
+//   max-width: 100%;
+//   max-height: 10em;
+// }
+max-size($width, $height = $width) 
+  size($width, $height, max);
+
+// calculation
+rem($num)
+  return ($num / 16 * 1)rem;
+	
+vw($num, $def = 1920)
+	return ($num * 100 / $def )vw;
+
+vh($num, $def = 1080)
+	return ($num * 100 / $def)vh;
+
+vmax($num, $def = 1920)
+	return ($num * 100 / $def )vmax;
+
+vmin($num, $def = 1080)
+	return ($num * 100 / $def)vmin;

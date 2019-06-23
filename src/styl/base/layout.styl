@@ -1,0 +1,79 @@
+/* ==========================================================================
+  BASIC - LAYOUT
+   ========================================================================== */
+html, body {
+  background: $white;
+  font: normal $font-size-base/1.5 $font-base;
+  color: $black;
+  overflow-x: hidden;
+  
+  .is-scrolling {
+    pointer-events: none;
+  }
+}
+body {
+  min-width: initial;
+}
+.l-container {
+  relative();
+  margin-right: auto
+  margin-left: auto
+  width: 100%;
+  //max-width: vh(1360)
+  max-width: 1360px;
+  padding: 0 vh(30);
+}
+
+.layout {
+  min-size($container-widths.min, 100vh);
+  width: 100vw;
+  background: $thirdly;
+  color: $white;
+
+  
+  flexy(flex-start, center, nowrap, column);
+
+  .page {
+    flex-grow: 1;
+    opacity: 1;
+  }
+
+}
+
+.l-spacer {
+  flex-grow: 1
+}
+
+.l-float {
+  &--left {
+    float: left;
+    
+    ^[0]--outside& {
+      margin-left: -52%;
+    }
+  }
+  &--right {
+    float: right;
+  
+    ^[0]--outside& {
+      margin-right: -52%;
+    }
+  }
+  &--outside {
+    width: 75%;
+  }
+}
+
+.st {
+  position: static;
+}
+
+video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+body > canvas, .wave-image {
+  display: none;
+}

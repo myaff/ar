@@ -1,0 +1,87 @@
+.btn {
+  relative();
+  display: inline-block;
+  size(vh(164), vh(55));
+  text-align: center;
+  vertical-align: middle;
+  border: 0;
+  font: 700 vh(26)/1 $font-base;
+  letter-spacing: 0.1em;
+  padding: 0;
+  background: url('../img/btn.svg') center no-repeat;
+  background-size: contain;
+  transform: translateZ(0);
+  box-sizing: border-box;
+  transition: all 0.3s;
+  border-radius: 0;
+
+  {hover-focus-active} {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+.btn-360 {
+  font: 700 vh(20) $font-base;
+  text-transform: uppercase;
+  text-align left
+  color: $white;
+  size(vh(290), vh(84));
+  background: url('../img/btn-filled.svg') center no-repeat;
+  background-size: contain;
+  cursor pointer
+  margin: 0 vh(13)
+
+  .text {
+    max-width: vh(150);
+    margin-top: vh(18);
+    margin-left: vh(40);
+    letter-spacing: 0.2em;
+    z-index 2
+  }
+
+  .img-360 {
+    absolute(vh(-4))
+    right: vh(-7);
+
+    &::before {
+      content: '';
+      display block;
+      absolute-center();
+      size(vh(200))
+      background: radial-gradient($thirdly, transparent 70%);
+    }
+
+    img {
+      display block
+      position relative
+      size(vh(99), auto)
+    }
+  }
+}
+
+.btn-ar {
+  font: 700 vh(14) $font-base;
+  text-transform uppercase;
+  text-align left
+  size(vh(227), vh(59));
+  background: url('../img/btn-ar.svg') center no-repeat;
+  background-size: contain;
+  margin vh(9) vh(15) 0
+  cursor: pointer
+
+  .text {
+    margin-top: vh(13);
+    margin-left: vh(34);
+    max-width: vh(104);
+    letter-spacing: 0.2em;
+  }
+
+  .ar {
+    absolute(vh(8));
+    right: vh(24);
+    font: 700 vh(48)/1 $font-base;
+    text-transform uppercase
+    letter-spacing: 0.05em;
+  }
+}

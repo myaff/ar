@@ -1,0 +1,12 @@
+extends template
+
+prepend page
+  - var layout = 'home';
+  - var currentPage = 'loader';
+  - var pageTitle = false;
+  - var pageDesc = false;
+  - var pageImg = false;
+
+block content
+  .page(class="page--" + currentPage)
+    include parts/loader

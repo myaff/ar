@@ -1,0 +1,32 @@
+// Mixin for filled button variants
+get-button-variant($color, $color-hover = darken($color, 10%), $color-active = darken($color, 20%))
+  background: $color;
+  color: white;
+  
+  {hover-focus}
+    background: $color-hover;
+    color: white;
+  
+  {active}
+    background: $color-active;
+    color: white;
+
+// Mixin for outlined button variants
+get-button-outline-variant($color, $color-hover = darken($color, 10%), $color-active = darken($color, 20%))
+  color: $color;
+  border-color: $color;
+  
+  {hover-focus}
+    background: $color-hover;
+    border-color: transparent;
+    color: white;
+    
+  {active}
+    background: $color-active;
+    border-color: transparent;
+    color: white;
+    
+button-text-style()
+  font: 700 14px/1.15 $font-button;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;

@@ -1,0 +1,103 @@
+// Примесь позволяет определить `position`, `top`, `right`, `bottom`, `left` одновременно.
+//
+// @author Hugo Giraudel
+// @access public
+// @group Utilities
+//
+// @param {String} $position - `position` элемента
+// @param {List} $args - список значений `top`, `right`, `bottom`, `left` элемента. После ключевого слова должно быть значение длины, иначе значение будет пропущено.
+//
+// @example styl - Использование
+// .element 
+//	  position(absolute, top 0 left 1em);
+//	
+// .other-element 
+//	  position(fixed, top 1em left "WAT? A STRING?!" right 10% bottom);
+//	
+//	@example css - Вывод CSS
+//	.element {
+//	  position: absolute;
+//	  top: 0;
+//	  left: 1em;
+//	}
+//	.other-element {
+//	  position: fixed;
+//	  top: 1em;
+//	  right: 10%;
+//	}
+pos($position, $top = false, $left = false, $bottom = false, $right = false)
+  position: $position;
+  if $top and $top is a 'unit'
+      top: $top;
+  if $left and $left is a 'unit'
+    left: $left;
+  if $bottom and $bottom is a 'unit'
+    bottom: $bottom;
+  if $right and $right is a 'unit'
+    right: $right;
+
+
+// Примесь позволяет определить `position:absolute`, `top`, `right`, `bottom`, `left` одновременно.
+//
+// @author Hugo Giraudel
+// @access public
+// @group Utilities
+//
+// @param {List} $args - список значений `top`, `right`, `bottom`, `left` элемента
+//
+// @example styl - Использование
+// .element 
+//	  absolute(top 0 left 1em);
+//	
+//	@example css - Вывод CSS
+//	.element {
+//	  position: absolute;
+//	  top: 0;
+//	  left: 1em;
+//	}
+absolute($top = false, $left = false, $bottom = false, $right = false) 
+	pos(absolute, $top, $left, $bottom, $right);
+
+
+// Примесь позволяет определить `position:fixed`, `top`, `right`, `bottom`, `left` одновременно.
+//
+// @author Hugo Giraudel
+// @access public
+// @group Utilities
+//
+// @param {List} $args - список значений `top`, `right`, `bottom`, `left` элемента
+//
+// @example styl - Использование
+// .element 
+//	  fixed(top 1em left "WAT? A STRING?!" right 10% bottom);
+//	
+//	@example css - Вывод CSS
+//	.element {
+//	  position: fixed;
+//	  top: 1em;
+//	  right: 10%;
+//	}
+fixed($top = false, $left = false, $bottom = false, $right = false) 
+	pos(fixed, $top, $left, $bottom, $right);
+
+
+// Примесь позволяет определить `position:relative`, `top`, `right`, `bottom`, `left` одновременно.
+//
+// @author Hugo Giraudel
+// @access public
+// @group Utilities
+//
+// @param {List} $args - список значений `top`, `right`, `bottom`, `left` элемента
+//
+// @example styl - Использование
+// .element 
+//	  relative(top 0 left 1em);
+//	
+//	@example css - Вывод CSS
+//	.element {
+//	  position: relative;
+//	  top: 0;
+//	  left: 1em;
+//	}
+relative($top = false, $left = false, $bottom = false, $right = false) 
+	pos(relative, $top, $left, $bottom, $right);

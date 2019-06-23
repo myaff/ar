@@ -1,0 +1,106 @@
+// Делает элемент круглым. Ширина и высота у элемента одинаковые, по умолчанию радиус скругления равен половине размера, но этот параметр можно изменить.
+// 
+// @group utilities
+// 
+// @param {Length} $size - `width` и `height` элемента.
+// @param {Length} $radius [$size/2] - `border-radius` элемента, по умолчанию - половина размера, можно задать любой радиус в единицах измерения длины.
+// 
+// @example styl - Использование
+// .element 
+//    circle(10rem);
+// 
+// .other-element 
+//    circle(80%, 50%);
+// 
+// 
+// @example css - Вывод CSS
+// .element {
+//    width: 10rem;
+//    height: 10rem;
+//    border-radius: 5rem;
+// }
+// .other-element {
+//    width: 80%;
+//    height: 80%;
+//    border-radius: 50%;
+// }
+circle($size, $radius = $size/2)
+  size($size);
+  border-radius: $radius;
+  overflow: hidden;
+
+
+// Делает треугольник. По умолчанию размер и цвет наследуется от шрифта, направление - острием вниз.
+// 
+// @group utilities
+// 
+// @param {Length} $size [1em] - Размер (Высота - при напримвалениях снизу вверх или сверху-вниз / Ширина - при направлениях справа-налево и слева-направо) от основания до вершины треугольника.
+// @param {String} $dir [bottom] - Направление, куда смотрит вершина треугольника, по умолчанию - вниз. Может быть `top`, `bottom`, `left`, `right`.
+// @param {Length} $sides-size [$size/2] - Размер (Ширина - при напримвалениях снизу-вверх или сверху-вниз / Высота - при направлениях справа-налево и слева-направо) от вершины до вершины треугольника.
+// @param {Color} $color [currentColor] - Цвет, по умолчанию наследуется от текста.
+// 
+// @example styl - Использование
+// .element 
+// 		triangle;
+// 
+// .other-element 
+// 		triangle(2em, right);
+// 
+// .another-element 
+// 		triangle(2em, top, 2em, black);
+// 
+// .get-warn 
+// 		triangle(1em, sometext);
+// 
+// 
+// @example css - Вывод CSS
+// .element {
+// 		display: block;
+// 		border-top: 1em solid currentColor;
+// 		border-bottom: 0 solid transparent;
+// 		border-left: 0.5em solid transparent;
+// 		border-right: 0.5em solid transparent;
+// }
+// .other-element {
+// 		display: block;
+// 		border-left: 2em solid currentColor;
+// 		border-right: 0 solid transparent;
+// 		border-top: 1em solid transparent;
+// 		border-bottom: 1em solid transparent;
+// }
+// .another-element {
+// 		display: block;
+// 		border-bottom: 2em solid black;
+// 		border-top: 0 solid transparent;
+// 		border-left: 2em solid transparent;
+// 		border-right: 2em solid transparent;
+// }
+// .get-warn {
+// 		`// nothing
+// 		`// and warning in CMD
+// }
+
+triangle($size = 1em, $dir = bottom, $sides-size = $size/2, $color = currentColor) 
+  size(0px);
+  $dir-opposite = top;
+  $sides = left right;
+  if $dir is bottom
+    $dir-opposite = top;
+  else if $dir is top
+    $dir-opposite = bottom;
+  else if $dir is left
+    $dir-opposite = right;
+    $sides = top bottom;
+  else if $dir is right
+    $dir-opposite = left;
+    $sides = top bottom;
+  else 
+    warn("$dir must be one of 'top, bottom, left or right'");
+  
+  
+  display: block;
+  border-{$dir-opposite}: $size solid $color;
+  border-{$dir}: 0 solid transparent;
+  for $side in $sides {
+    border-{$side}: ($sides-size / 2) solid transparent;
+  }

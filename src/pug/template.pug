@@ -1,0 +1,34 @@
+include ./mixins
+doctype html
+block page
+  html
+    head
+      block head
+        title= pageTitle ? pageTitle : settings.ogDefaults.title
+        meta(property="og:title", content=pageTitle ? pageTitle : settings.ogDefaults.title)
+        if settings.ogDefaults.descroption
+          meta(property="og:description", content=pageDesc ? pageDesc : settings.ogDefaults.description)
+        if settings.ogDefaults.image
+          meta(property="og:image", content=pageImg ? pageImg : settings.ogDefaults.image)
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        //- include parts/favicon
+        //- link(rel="shortcut icon" href="favicon.ico", type="image/x-icon")
+        each item in settings.styles.head
+          link(href=item, rel="stylesheet")
+        link(href="build/css/main.css", rel="stylesheet")
+        each item in settings.scripts.head
+          script(src=item)
+    body
+      .svg-sprite
+      script
+        | $('.svg-sprite').html(SVG_SPRITE);
+      .layout(class="layout--" + layout)
+        include parts/header
+        block content
+        include parts/ar-popup
+      //- include counters.html
+      
+      each item in settings.scripts.foot
+        script(src=item)
+      script(src="build/js/main.js")

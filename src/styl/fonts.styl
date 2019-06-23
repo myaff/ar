@@ -1,0 +1,28 @@
+fontPathsExtended($font){
+  src: url($fonts-path+$font+'.eot');
+  src: url($fonts-path+$font+'.eot#iefix') format("embedded-opentype"),
+       url($fonts-path+$font+'.woff') format("woff"),
+       url($fonts-path+$font+'.woff2') format("woff2"),
+       url($fonts-path+$font+'.ttf') format("truetype"),
+       url($fonts-path+$font+'.otf') format("opentype");
+}
+
+fontPaths($font){
+  src: url($fonts-path + $font + '.otf') format("opentype");
+}
+
+
+if $use-fonts {
+  for key, $font in $fonts-arr {
+    @font-face {
+      font-family: unquote($font.name);
+      if $use-fonts-extended {
+        fontPathsExtended($font.file);
+      } else {
+        fontPaths($font.file);
+      }
+      font-weight: $font.weight;
+      font-style: $font.style;
+    }
+  }
+}

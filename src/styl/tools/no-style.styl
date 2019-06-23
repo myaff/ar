@@ -1,0 +1,22 @@
+no-style-list()
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  > li
+    margin: 0;
+    padding: 0;
+    
+    &::before
+      display: none;
+
+no-childs-margin($dir = vertical)
+  $first = top;
+  $last = bottom;
+  if $dir == horizontal
+    $first = left;
+    $last = right;
+  &:first-child
+    margin-{$first}: 0;
+  &:last-child
+    margin-{$last}: 0;

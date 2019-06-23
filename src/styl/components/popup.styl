@@ -1,0 +1,21 @@
+.popup {
+  fixed(0px, 0px);
+  size(100%);
+  display: none;
+  background: rgba($darker, 0.8);
+  z-index: 99;
+
+  &.main-menu {
+    z-index: 9;
+  }
+
+  &__inner {
+    size(100%);
+    flexy(center, center);
+  }
+
+  &.main-menu &__inner {
+    align-items: flex-start;
+    padding-top: vh(165);
+  }
+}

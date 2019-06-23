@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OG Title</title>
+    <meta property="og:title" content="OG Title">
+    <meta property="og:image" content="OG Image">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="build/css/main.css" rel="stylesheet">
+    <script src="build/js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="build/js/vendor/jquery.ba-throttle-debounce.js"></script>
+    <script src="https://cdn.rawgit.com/iserdmi/afterlag-js/2.0.2/dist/jquery.afterlag.min.js"></script>
+    <script src="build/img/svg/sprite.js"></script>
+  </head>
+  <body>
+    <div class="svg-sprite"></div>
+    <script>$('.svg-sprite').html(SVG_SPRITE);</script>
+    <div class="layout layout--home">
+      <div class="header">
+        <div class="l-container">
+          <div class="header__content">
+            <div class="header__logo header__logo">
+                    <svg class="icon icon--block a-logo">
+                      <use xlink:href="#a-logo"></use>
+                    </svg>
+                    <svg class="icon icon--block adr-logo">
+                      <use xlink:href="#adrenaline"></use>
+                    </svg>
+            </div>
+            <div class="header__menu">
+              <div class="btn-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="main-menu popup">
+                <div class="popup__inner">
+                  <div class="l-container">
+                    <div class="popup__content">
+                                    <nav class="nav">
+                                      <ul class="nav__list">
+                                        <li class="nav__item"><a class="nav__link" href="#">о Homo Ludens</a></li>
+                                        <li class="nav__item"><a class="nav__link" href="#">Местоположение</a></li>
+                                        <li class="nav__item"><a class="nav__link" href="#">Adrenaline Game Fuel</a></li>
+                                        <li class="nav__item"><a class="nav__link" href="#">Лекции</a></li>
+                                        <li class="nav__item"><a class="nav__link" href="#">Обратная связь</a></li>
+                                      </ul>
+                                    </nav>
+                                    <nav class="nav-icons">
+                                      <ul class="nav-icons__list">
+                                        <li class="nav-icons__item"><a class="nav-icons__link" href="#" target="_blank" title="Facebook">
+                                                          <svg class="icon">
+                                                            <use xlink:href="#fb"></use>
+                                                          </svg></a></li>
+                                        <li class="nav-icons__item"><a class="nav-icons__link" href="#" target="_blank" title="Youtube">
+                                                          <svg class="icon">
+                                                            <use xlink:href="#yt"></use>
+                                                          </svg></a></li>
+                                        <li class="nav-icons__item"><a class="nav-icons__link" href="#" target="_blank" title="Twitch">
+                                                          <svg class="icon">
+                                                            <use xlink:href="#twch"></use>
+                                                          </svg></a></li>
+                                      </ul>
+                                    </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page page--loader">
+        <div class="loading">
+          <div class="loading__inner">
+            <div class="l-container">
+              <div class="loading__content">
+                <div class="loader">
+                  <div class="box">
+                    <div class="line"></div>
+                  </div>
+                  <div class="percentage">48%</div>
+                </div>
+                <div class="title">Открываем портал в AR...</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="ar-popup">
+        <div class="popup__inner">
+          <div class="l-container">
+            <div class="popup__content">
+              <div class="show-ludens">
+                <div class="title">посмотреть homo&nbsp;ludens&nbsp;AR </div>
+                <div class="subtitle">откройте страницу с мобильного устройства</div>
+                <button class="btn btn-close-popup">Назад</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="build/js/main.js"></script>
+  </body>
+</html>

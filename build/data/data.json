@@ -1,0 +1,76 @@
+{
+	"settings": {
+		"scripts": {
+			"head": [
+				"build/js/vendor/jquery-3.2.1.min.js",
+				"build/js/vendor/jquery.ba-throttle-debounce.js",
+				"https://cdn.rawgit.com/iserdmi/afterlag-js/2.0.2/dist/jquery.afterlag.min.js",
+				"build/img/svg/sprite.js"
+			],
+			"temp": [
+				"https://api-maps.yandex.ru/2.1/?apikey=41b512d5-2a9e-49e4-b030-fe9705e7e841&lang=ru_RU",
+				"https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCv0MAFow31tpX0tcPa5OatGH2sZxARZdM",
+				"build/js/vendor/jquery.mousewheel.min.js",
+				"build/js/vendor/jquery.touchSwipe.min.js",
+				"https://yastatic.net/share2/share.js",
+				"build/js/vendor/TweenMax.min.js"
+			],
+			"foot": [
+			]
+		},
+		"styles": {
+			"head": [
+			],
+			"temp": [
+				"https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900&amp;subset=cyrillic"
+			]
+		},
+		"socials": "vkontakte,facebook,twitter,telegram",
+		"ogDefaults": {
+			"title": "OG Title",
+			"description": "OG Description",
+			"image": "OG Image"
+		}
+	},
+	"navs": {
+		"main": [
+			{
+				"title": "о Homo Ludens",
+				"url": "#"
+			},
+			{
+				"title": "Местоположение",
+				"url": "#"
+			},
+			{
+				"title": "Adrenaline Game Fuel",
+				"url": "#"
+			},
+			{
+				"title": "Лекции",
+				"url": "#"
+			},
+			{
+				"title": "Обратная связь",
+				"url": "#"
+			}
+		],
+		"social": [
+			{
+				"title": "Facebook",
+				"url": "#",
+				"icon": "fb"
+			},
+			{
+				"title": "Youtube",
+				"url": "#",
+				"icon": "yt"
+			},
+			{
+				"title": "Twitch",
+				"url": "#",
+				"icon": "twch"
+			}
+		]
+	}
+}

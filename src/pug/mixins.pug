@@ -1,0 +1,32 @@
+mixin icon(iconName)
+	svg&attributes(attributes).icon: use(xlink:href="#" + iconName)
+
+//- components
+mixin navMenu(menuList)
+	nav&attributes(attributes).nav
+		ul.nav__list
+			for item in menuList
+				li.nav__item
+						a.nav__link(href=item.url, class=(item.key === 'anchor') ? 'js-anchor' : '') !{item.title}
+
+mixin navIcons(menuList)
+	nav&attributes(attributes).nav-icons
+		ul.nav-icons__list
+			for item in menuList
+				li.nav-icons__item
+					a.nav-icons__link(href=item.url, target="_blank", title=item.title)
+						+icon(item.icon)
+
+mixin modal(modalID)
+	div&attributes(attributes).modal(id=modalID)
+		.modal__window
+			.modal__close.btn-close-modal
+				+icon("cross").icon--block
+			.modal__inner
+				.modal__content
+					block
+
+mixin btn360()
+	div&attributes(attributes).btn-360
+		block
+		.img-360: img(src="build/img/360.png")

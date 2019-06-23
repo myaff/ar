@@ -1,0 +1,70 @@
+.svg-sprite {
+  display: none;
+}
+
+svg {
+  line-height: 1;
+  color: inherit;
+  vertical-align: middle;
+  
+  use {
+    color: inherit;
+    fill: currentColor;
+  }
+}
+
+.icon {
+  display: inline-block;
+  size(1em);
+  &--stroked use {
+    stroke: currentColor;
+  }
+  &--stroked-2 use {
+    stroke: currentColor;
+    stroke-width: 2px;
+  }
+  &--stroked-3 use {
+    stroke: currentColor;
+    stroke-width: 3px;
+  }
+  
+  &--no-fill use {
+    fill: none;
+  }
+  
+  &--hover-fill use {
+    fill: none;
+    &:hover {
+      fill: currentColor;
+    }
+  }
+  
+  &--active-fill use {
+    fill: none;
+  }
+  &--active-fill.is-active use {
+    fill: currentColor;
+  }
+  
+  // sizes
+  &--small {
+    size(0.75em);
+  }
+  &--20 {
+    size(1.25rem);
+  }
+  &--medium {
+    size(1.5rem);
+  }
+  &--big {
+    size(2em);
+  }
+  &--large {
+    size(3em);
+  }
+  
+  &--block {
+    display: block;
+    size(100%);
+  }
+}

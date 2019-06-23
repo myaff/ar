@@ -1,0 +1,161 @@
+$text-color = $black;
+$link-color = $text-color;
+$link-color--active = $link-color;
+
+html, body {
+  font-size: $font-size-base;
+  line-height: 1.5;
+  font-family: $font-base;
+  color: $text-color;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  
+  {hover-focus-active} {
+    color: $link-color--active;
+    outline: 0;
+  }
+}
+
+.link-back {
+  font: 14px/1 $font-util;
+  
+  a {
+    text-decoration: underline;
+    color: $secondary;
+
+    {hover-focus-active} {
+      color: $primary;
+    }
+  }
+}
+
+.tp-heading {
+  &--big {
+    font: bold 36px $font-base;
+    text-transform: uppercase;
+    
+    @media $mobile {
+      font-size: (55*100/750)vw;
+      text-align: center;
+    }
+  }
+  &--medium {
+    font: bold 22px/1 $font-base;
+    text-transform: uppercase;
+    @media $mobile {
+      font-size: (40*100/750)vw;
+    }
+  }
+  &--small {
+    font: bold 30px $font-base;
+    text-transform: uppercase;
+  }
+}
+.tp-body {
+  &--big {
+    font: 900 1.5rem/1.46 $font-accent;
+    @media $msWidth {
+      font-size: 3.4vw;
+      line-height: 1.5;
+    }
+  }
+  &--medium {
+    font: bold 28px/1.43 $font-util;
+
+    @media $smWidth {
+      font-size: 5vw;
+    }
+  }
+  &--base {
+    font: 1.25rem/1.5 $font-base;
+
+    @media $smWidth {
+      font-size: 4.375vw;
+    }
+  }
+  &--small {
+    font-size: 14px;
+  }
+  &--smaller {
+    font-size: 13px;
+  }
+}
+b, strong {
+  font: inherit;
+  font-weight: bold;
+}
+.tp-text {
+  for $align in (left right center) {
+    &--{$align} {
+      text-align: $align;
+    }
+  }
+  &--light {
+    opacity: 0.8;
+  }
+  &--lighter {
+    opacity: 0.6;
+  }
+  &--lightest {
+    opacity: 0.5;
+  }
+  &--upper {
+    text-transform: uppercase;
+  }
+  &--lower {
+    text-transform: lowercase;
+  }
+  &--truncate {
+    truncate();
+  }
+  &--nowrp {
+    white-space: nowrap;
+  }
+}
+
+p {
+  margin: 1em 0;
+  no-childs-margin();
+}
+
+.primary {
+  color: $primary;
+}
+.secondary {
+  color: $secondary;
+}
+
+.btn {
+  display: inline-block;
+  font: 14px/1 $font-accent;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid;
+  transition: all 0.3s;
+  box-sizing: border-box;
+
+  &--primary {
+    background: $white;
+    color: $primary;
+    border-color: $white;
+
+    {hover-focus-active} {
+      background: transparent;
+      color: $white;
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    color: $white;
+
+    {hover-focus-active} {
+      background: $white;
+      color: $primary;
+    }
+  }
+}

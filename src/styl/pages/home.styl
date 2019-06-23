@@ -1,0 +1,67 @@
+.page--home {
+  width: 100%;
+  background: url('../img/home.jpg') top center no-repeat;
+  background-size: cover;
+
+  .page-inner {
+    flexy(center, flex-start);
+  }
+  
+  .page-content {
+    flex: 0 0 50%;
+    padding-top: vh(226);
+    padding-left: vh(70);
+    color: $secondary;
+
+    .title {
+      font: 700 vh(73)/1 $font-base;
+      text-transform: uppercase;
+      letter-spacing: 0.145em;
+
+      &:first-line {
+        letter-spacing: 0.21em;
+      }
+    }
+    .subtitle {
+      font: 200 vh(26)/1 $font-base;
+      text-transform: uppercase;
+      margin-top: vh(32);
+      margin-left: vh(4);
+      letter-spacing: 0.2em;
+    }
+
+    .btns {
+      margin-top: vh(60);
+      flexy(flex-start, center);
+    }
+  }
+  .page-img {
+    flex: 0 0 50%;
+    height: 100vh;
+
+    .text {
+      absolute(vh(460), vh(212));
+      width: vh(220);
+      font: 900 vh(54)/1 $font-accent;
+      letter-spacing: -0.05em;
+      text-shadow: 0 vh(3) 0 $thirdly;
+      transform: scaleY(1.25);
+
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        absolute(106%, 0px);
+        size(0px);
+      }
+      &::before {
+        border-top vh(11.2) solid $thirdly;
+        border-right: vh(220) solid transparent;
+      }
+      &::after {
+        border-top vh(8) solid $white;
+        border-right: vh(220) solid transparent;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+extends template
+
+prepend page
+	- var layout = 'home';
+	- var currentPage = 'home';
+	- var pageTitle = false;
+	- var pageDesc = false;
+	- var pageImg = false;
+
+block content
+	.page(class="page--" + currentPage)
+		.page-bg
+		.page-wrapper
+			.l-container
+				.page-inner
+					.page-content
+						.title Левелдизайн на&nbsp;уровне ДНК
+						.subtitle Он прошёл путём игровой эволюции
+						.btns
+							+btn360().btn
+								.text посмотреть 3d&nbsp;модель
+							.btn.btn-ar.btn-popup(data-target="#ar-popup")
+								.text посмотреть Homo&nbsp;Ludens
+								.ar AR
+					.page-img
+						.text HOMO LUDENS

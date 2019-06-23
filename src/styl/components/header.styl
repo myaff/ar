@@ -1,0 +1,35 @@
+.header {
+	absolute(0px, 0px);
+	width: 100%;
+	z-index: 9;
+	background: transparent;
+	color: $white;
+
+	a {
+		color: inherit;
+	}
+
+	&__content {
+		flexy(space-between, center);
+		padding: vh(40) 0 0;
+	}
+
+	&__logo {
+		flex: 0 0 vh(230);
+		flexy(flex-start, center);
+		z-index: 10;
+		
+		.a-logo {
+			size(vh(66));
+			margin-right: vh(10);
+		}
+		.adr-logo {
+			size(vh(160), vh(66));
+		}
+	}
+
+	&__menu {
+		flex: 0 0 vh(80);
+	}
+	
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Brotherhood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Olga Grabko",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "eslint": "^5.9.0",
+    "fs": "0.0.1-security",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-data": "^1.3.1",
+    "gulp-debug": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-jsdoc3": "^2.0.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-stylus": "^2.7.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svg2string": "^0.3.0",
+    "gulp-uglify": "^3.0.1",
+    "gulp-v4": "^4.0.0-alpha.5",
+    "html-webpack-plugin": "^2.30.1",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "pug": "^2.0.3",
+    "webpack-stream": "^3.2.0"
+  }
+}

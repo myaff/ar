@@ -1,0 +1,17 @@
+display-grid()
+  display: -ms-grid;
+  display: grid;
+
+grid-template($prop, $args)
+  -ms-grid-{$prop}: $args;
+  grid-template-{$prop}: $args;
+
+grid-cell-size-ms($prop, $arg, $hasGutter = true)
+  -ms-grid-{$prop}-span: $hasGutter ? ($arg + ($arg - 1)) : $arg;
+  
+grid-cell-size($prop, $arg, $hasGutter = true)
+  grid-cell-size-ms($prop, $arg, $hasGutter);
+  grid-{$prop}-start: span $arg;
+
+grid-cell-position($prop, $arg, $hasGutter = true)
+  -ms-grid-{$prop}:  $hasGutter ? ($arg + ($arg - 1)) : $arg;

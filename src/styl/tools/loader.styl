@@ -1,0 +1,18 @@
+loader-shape($size = 2.5rem)
+  circle($size);
+  border: 2px solid;
+  animation: rotation 1.5s linear infinite;
+
+loader-theme($color-front = $lipstick, $color-back = rgba($color-kight, 0.1))
+  border-color: $color-back;
+  border-right-color: $color-front;
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

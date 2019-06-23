@@ -1,0 +1,42 @@
+$display-breakpoints-only := {
+  xs: $display-breakpoints.xs-only,
+  ms: $display-breakpoints.ms-only,
+  sm: $display-breakpoints.sm-only,
+  md: $display-breakpoints.md-only,
+  lg: $display-breakpoints.lg-only,
+  xl: $display-breakpoints.xl-only
+}
+$display-breakpoints-down := {
+  xs: $display-breakpoints.xs-and-down,
+  ms: $display-breakpoints.ms-and-down,
+  sm: $display-breakpoints.sm-and-down,
+  md: $display-breakpoints.md-and-down,
+  lg: $display-breakpoints.lg-and-down,
+  xl: $display-breakpoints.xl-and-down
+}
+$display-breakpoints-up := {
+  xs: $display-breakpoints.xs-and-up,
+  ms: $display-breakpoints.ms-and-up,
+  sm: $display-breakpoints.sm-and-up,
+  md: $display-breakpoints.md-and-up,
+  lg: $display-breakpoints.lg-and-up,
+  xl: $display-breakpoints.xl-and-up
+}
+
+.l-hidden
+  display: none !important;
+  
+  for $key, $point in $display-breakpoints-only
+    @media $point
+      &-{$key}
+        display: none !important;
+  
+  for $key, $point in $display-breakpoints-down
+    @media $point
+      &-{$key}-down
+        display: none !important;
+  
+  for $key, $point in $display-breakpoints-up
+    @media $point
+      &-{$key}-up
+        display: none !important;
