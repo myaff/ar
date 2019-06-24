@@ -8,22 +8,22 @@
   &__item {
     display: block;
     padding: 0;
-    margin: vh(20);
+    margin: 20px;
   }
   &__link {
     display: block;
     text-align: center;
-    font: 700 vh(30)/1 $font-base;
+    font: 700 30px/1 $font-base;
     text-transform: uppercase;
     letter-spacing 0.35em;
-    padding: vh(8);
+    padding: 8px;
     color: $white;
-    text-shadow: vh(5) vh(7) 0 rgba($white, 0.15);
+    text-shadow: 5px 7px 0 rgba($white, 0.15);
   }
 }
 
 .nav-icons {
-  margin-top: vh(80);
+  margin-top: 80px;
 
   &__list {
     padding: 0;
@@ -33,15 +33,15 @@
   }
 
   &__item {
-    flex: 0 0 vh(48);
-    margin: vh(11);
+    flex: 0 0 48px;
+    margin: 11px;
   }
 
   &__link {
     border: 1px solid currentColor;
     flexy(center, center);
-    size(vh(48))
-    font-size: vh(30);
+    size(48px)
+    font-size: 30px;
     box-sizing: border-box;
 
     a& {
@@ -51,21 +51,21 @@
 }
 
 .btn-menu {
-  size(vh(80), vh(66));
+  size(80px, 66px);
   z-index: 10;
   cursor: pointer;
 
   div {
     absolute(50%);
     right: 0;
-    height: vh(4);
+    height: 4px;
     background: currentColor;
-    border-radius: vh(2);
+    border-radius: 2px;
     transition: transform 0.3s, width 0.3s;
     transform-origin: center;
 
     &:first-child {
-      transform: translateY(vh(-20));
+      transform: translateY(-20px);
       width: 100%;
     }
 
@@ -74,7 +74,7 @@
     }
 
     &:last-child {
-      transform: translateY(vh(20));
+      transform: translateY(20px);
       width: 42.5%;
     }
   }

@@ -1,7 +1,20 @@
 .page--home {
   width: 100%;
-  background: url('../img/home.jpg') top center no-repeat;
-  background-size: cover;
+
+  .page-bg-hero {
+    absolute(0px, 50%);
+    margin-left: -390px;
+    size(1350px, 100%);
+    background: url('../img/home.jpg') top center no-repeat;
+    mix-blend-mode: lighten;
+  }
+
+  .page-bg-parts {
+    absolute(0px, 0px);
+    size(100%);
+    background: url('../img/bg-parts.png') center no-repeat;
+    background-size: auto 830px;
+  }
 
   .page-inner {
     flexy(center, flex-start);
@@ -9,12 +22,12 @@
   
   .page-content {
     flex: 0 0 50%;
-    padding-top: vh(226);
-    padding-left: vh(70);
+    padding-top: 226px;
+    padding-left: 70px;
     color: $secondary;
 
     .title {
-      font: 700 vh(73)/1 $font-base;
+      font: 700 73px/1 $font-base;
       text-transform: uppercase;
       letter-spacing: 0.145em;
 
@@ -23,15 +36,15 @@
       }
     }
     .subtitle {
-      font: 200 vh(26)/1 $font-base;
+      font: 200 26px/1 $font-base;
       text-transform: uppercase;
-      margin-top: vh(32);
-      margin-left: vh(4);
+      margin-top: 32px;
+      margin-left: 4px;
       letter-spacing: 0.2em;
     }
 
     .btns {
-      margin-top: vh(60);
+      margin-top: 60px;
       flexy(flex-start, center);
     }
   }
@@ -39,12 +52,24 @@
     flex: 0 0 50%;
     height: 100vh;
 
+    .hero {
+      absolute(0px);
+      left: -390px;
+      size(1350px, 100%);
+      background: url('../img/home.jpg') top center no-repeat;
+      background-size: auto 1080px;
+      img {
+        display block
+        max-width 100%
+      }
+    }
+
     .text {
-      absolute(vh(460), vh(212));
-      width: vh(220);
-      font: 900 vh(54)/1 $font-accent;
+      absolute(460px, 212px);
+      width: 220px;
+      font: 900 54px/1 $font-accent;
       letter-spacing: -0.05em;
-      text-shadow: 0 vh(3) 0 $thirdly;
+      text-shadow: 0 3px 0 $thirdly;
       transform: scaleY(1.25);
 
       &::before,
@@ -55,12 +80,12 @@
         size(0px);
       }
       &::before {
-        border-top vh(11.2) solid $thirdly;
-        border-right: vh(220) solid transparent;
+        border-top 11.2px solid $thirdly;
+        border-right: 220px solid transparent;
       }
       &::after {
-        border-top vh(8) solid $white;
-        border-right: vh(220) solid transparent;
+        border-top 8px solid $white;
+        border-right: 220px solid transparent;
       }
     }
   }

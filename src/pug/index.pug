@@ -9,18 +9,20 @@ prepend page
 
 block content
 	.page(class="page--" + currentPage)
-		.page-bg
+		.page-bg-hero
+		.page-bg-parts
 		.page-wrapper
 			.l-container
 				.page-inner
 					.page-content
-						.title Левелдизайн на&nbsp;уровне ДНК
+						.title Левелдизайн на&nbsp;уровне&nbsp;ДНК
 						.subtitle Он прошёл путём игровой эволюции
 						.btns
-							+btn360().btn
+							+btn360()
 								.text посмотреть 3d&nbsp;модель
-							.btn.btn-ar.btn-popup(data-target="#ar-popup")
+							+btn('btn-ar').btn-ar.btn-popup(data-target="#ar-popup")
 								.text посмотреть Homo&nbsp;Ludens
 								.ar AR
 					.page-img
+						//- .hero: img(src="build/img/center.png")
 						.text HOMO LUDENS

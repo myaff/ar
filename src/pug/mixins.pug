@@ -27,6 +27,12 @@ mixin modal(modalID)
 					block
 
 mixin btn360()
-	div&attributes(attributes).btn-360
+	div&attributes(attributes).btn.btn-360
+		//- +icon('btn-filled').icon--block.icon-bg
 		block
 		.img-360: img(src="build/img/360.png")
+
+mixin btn(iconName = 'btn')
+	div&attributes(attributes).btn
+		//- +icon(iconName).icon--block.icon-bg
+		block
