@@ -22,6 +22,11 @@ body {
   //max-width: vh(1360)
   max-width: 1360px;
   padding: 0 30px;
+
+  @media $mdHeight {
+    max-width: vh(1360);
+    padding: 0 vh(30);
+  }
 }
 
 .layout {
