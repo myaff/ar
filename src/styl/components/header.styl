@@ -11,46 +11,25 @@
 
 	&__content {
 		flexy(space-between, center);
-		padding: 40px 0 0;
-
-		@media $mdHeight {
-			padding-top: vh(40);
-		}
+		padding: vh(40) 0 0;
 	}
 
 	&__logo {
-		flex: 0 0 230px;
+		flex: 0 0 vh(230);
 		flexy(flex-start, center);
 		z-index: 10;
-
-		@media $mdHeight {
-			flex-basis: vh(230);
-		}
 		
 		.a-logo {
-			size(66px);
-			margin-right: 10px;
-
-			@media $mdHeight {
-				size(vh(66));
-				margin-right: vh(10);
-			}
+			size(vh(66));
+			margin-right: vh(10);
 		}
 		.adr-logo {
-			size(160px, 66px);
-
-			@media $mdHeight {
-				size(vh(160), vh(66));
-			}
+			size(vh(160), vh(66));
 		}
 	}
 
 	&__menu {
-		flex: 0 0 80px;
-
-		@media $mdHeight {
-			flex-basis: vh(80);
-		}
+		flex: 0 0 vh(80);
 	}
 	
 }
