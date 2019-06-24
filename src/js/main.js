@@ -16,7 +16,7 @@ $(document).ready(function(){
   
   $('html').addClass('is-animating');
   
-  //Animation.init();
+  Animation.init();
 
   
 });
