@@ -143,7 +143,7 @@ function shiftPoint(p) {
     x: p.originX-50+Math.random()*100,
     y: p.originY-50+Math.random()*100, 
     opacity: Math.random(),
-    ease:Circ.easeInOut,
+    ease:Power1.easeInOut,
     onComplete: function() {
         shiftPoint(p);
     }
