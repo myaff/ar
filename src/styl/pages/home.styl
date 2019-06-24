@@ -11,6 +11,10 @@
   .page-inner {
     flexy(flex-start, center);
     height: 100vh;
+
+    @media $lgHeight {
+      align-items: flex-start;
+    }
   }
   
   .page-content {
@@ -23,6 +27,9 @@
     @media $mdHeight {
       padding-top: vh(30);
       padding-left: vh(70);
+    }
+    @media $lgHeight {
+      padding-top: 226px;
     }
 
     .title {
