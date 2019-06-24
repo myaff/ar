@@ -16,9 +16,7 @@
 			],
 			"foot": [
 				"https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js",
-				"build/js/vendor/TweenMax.min.js",
-				"https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js",
-				"https://cdnjs.cloudflare.com/ajax/libs/core-js/2.6.5/core.min.js"
+				"build/js/vendor/TweenMax.min.js"
 			]
 		},
 		"styles": {
