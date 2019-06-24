@@ -8,36 +8,22 @@
   &__item {
     display: block;
     padding: 0;
-    margin: 20px;
-
-    @media $mdHeight {
-      margin: vh(20);
-    }
+    margin: vh(20);
   }
   &__link {
     display: block;
     text-align: center;
-    font: 700 30px/1 $font-base;
+    font: 700 vh(30)/1 $font-base;
     text-transform: uppercase;
     letter-spacing 0.35em;
-    padding: 8px;
+    padding: vh(8);
     color: $white;
-    text-shadow: 5px 7px 0 rgba($white, 0.15);
-
-    @media $mdHeight {
-      font-size: vh(30);
-      padding: vh(8);
-      text-shadow: vh(5) vh(7) 0 rgba($white, 0.15);
-    }
+    text-shadow: vh(5) vh(7) 0 rgba($white, 0.15);
   }
 }
 
 .nav-icons {
-  margin-top: 80px;
-
-  @media $mdHeight {
-    margin-top: vh(80);
-  }
+  margin-top: vh(80);
 
   &__list {
     padding: 0;
@@ -47,26 +33,16 @@
   }
 
   &__item {
-    flex: 0 0 48px;
-    margin: 11px;
-
-    @media $mdHeight {
-      flex-basis: vh(48);
-      margin: vh(11);
-    }
+    flex: 0 0 vh(48);
+    margin: vh(11);
   }
 
   &__link {
     border: 1px solid currentColor;
     flexy(center, center);
-    size(48px)
-    font-size: 30px;
+    size(vh(48))
+    font-size: vh(30);
     box-sizing: border-box;
-
-    @media $mdHeight {
-      size(vh(48));
-      font-size: vh(30);
-    }
 
     a& {
       color: $primary;
@@ -75,35 +51,22 @@
 }
 
 .btn-menu {
-  size(80px, 66px);
+  size(vh(80), vh(66));
   z-index: 10;
   cursor: pointer;
-
-  @media $mdHeight {
-    size(vh(80), vh(66));
-  }
 
   div {
     absolute(50%);
     right: 0;
-    height: 4px;
+    height: vh(4);
     background: currentColor;
-    border-radius: 2px;
+    border-radius: vh(2);
     transition: transform 0.3s, width 0.3s;
     transform-origin: center;
 
-    @media $mdHeight {
-      height: vh(4);
-      border-radius: vh(2);
-    }
-
     &:first-child {
-      transform: translateY(-20px);
+      transform: translateY(vh(-20));
       width: 100%;
-
-      @media $mdHeight {
-        transform: translateY(vh(-20));
-      }
     }
 
     &:nth-child(2) {
@@ -111,12 +74,8 @@
     }
 
     &:last-child {
-      transform: translateY(20px);
+      transform: translateY(vh(20));
       width: 42.5%;
-
-      @media $mdHeight {
-        transform: translateY(vh(20));
-      }
     }
   }
 
